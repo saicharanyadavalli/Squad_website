@@ -1,0 +1,392 @@
+/* Team India Website Styles */
+:root {
+    --india-blue: #000080;
+    --india-orange: #FF9933;
+    --india-green: #138808;
+    --india-white: #FFFFFF;
+    --india-saffron: #FF9933;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, var(--india-blue) 0%, var(--india-green) 100%);
+    color: var(--india-white);
+    overflow-x: hidden;
+}
+
+.hero-section {
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url('https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.hero-content {
+    text-align: center;
+    z-index: 2;
+}
+
+.team-logo {
+    width: 180px;
+    height: 180px;
+    background: linear-gradient(45deg, var(--india-orange), var(--india-saffron));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 2rem;
+    border: 8px solid var(--india-white);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+
+.team-logo i {
+    font-size: 5rem;
+    color: var(--india-blue);
+}
+
+.hero-title {
+    font-size: 4.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+    background: linear-gradient(45deg, var(--india-orange), var(--india-white), var(--india-green));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: slideInDown 1s ease-out;
+}
+
+@keyframes slideInDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.hero-slogan {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    color: var(--india-orange);
+    font-style: italic;
+    font-weight: 300;
+    animation: slideInUp 1s ease-out 0.5s both;
+}
+
+@keyframes slideInUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.stats-section {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 25px;
+    padding: 3rem;
+    margin: 3rem 0;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    animation: fadeIn 1s ease-out 1s both;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.stat-card {
+    text-align: center;
+    padding: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+}
+
+.stat-number {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--india-orange);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.stat-label {
+    font-size: 1.1rem;
+    color: var(--india-white);
+    opacity: 0.9;
+    font-weight: 500;
+}
+
+.players-section {
+    padding: 5rem 0;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.section-title {
+    text-align: center;
+    font-size: 3.5rem;
+    margin-bottom: 4rem;
+    color: var(--india-orange);
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+    font-weight: 700;
+}
+
+.player-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 25px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    border: 3px solid transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.player-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transition: left 0.5s;
+}
+
+.player-card:hover::before {
+    left: 100%;
+}
+
+.player-card:hover {
+    transform: translateY(-15px) scale(1.02);
+    border-color: var(--india-orange);
+    box-shadow: 0 20px 40px rgba(255, 153, 51, 0.4);
+}
+
+.player-image {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 1.5rem;
+    display: block;
+    border: 6px solid var(--india-orange);
+    transition: transform 0.3s ease;
+}
+
+.player-card:hover .player-image {
+    transform: scale(1.1);
+}
+
+.player-name {
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    color: var(--india-white);
+}
+
+.player-role {
+    text-align: center;
+    color: var(--india-orange);
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.player-stats {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.stat-item {
+    flex: 1;
+    padding: 0.5rem;
+}
+
+.stat-value {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--india-white);
+}
+
+.stat-name {
+    font-size: 0.9rem;
+    color: var(--india-white);
+    opacity: 0.8;
+}
+
+.modal-content {
+    background: linear-gradient(135deg, var(--india-blue) 0%, var(--india-green) 100%);
+    color: var(--india-white);
+    border: none;
+    border-radius: 25px;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+}
+
+.modal-header {
+    border-bottom: 3px solid var(--india-orange);
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 25px 25px 0 0;
+    padding: 2rem;
+}
+
+.modal-title {
+    color: var(--india-orange);
+    font-weight: 700;
+    font-size: 1.8rem;
+}
+
+.modal-body {
+    padding: 3rem;
+}
+
+.player-modal-image {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 2rem;
+    display: block;
+    border: 8px solid var(--india-orange);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.stat-box {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1.5rem;
+    border-radius: 15px;
+    text-align: center;
+    border: 2px solid var(--india-orange);
+    transition: transform 0.3s ease;
+}
+
+.stat-box:hover {
+    transform: translateY(-5px);
+}
+
+.stat-box-value {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--india-orange);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.stat-box-label {
+    font-size: 1rem;
+    color: var(--india-white);
+    opacity: 0.9;
+    font-weight: 500;
+}
+
+.best-performance {
+    background: linear-gradient(45deg, var(--india-orange), var(--india-green));
+    padding: 2rem;
+    border-radius: 15px;
+    margin-top: 2rem;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.best-performance h5 {
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: bounce 2s infinite;
+    color: var(--india-orange);
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    40% {
+        transform: translateX(-50%) translateY(-15px);
+    }
+    60% {
+        transform: translateX(-50%) translateY(-7px);
+    }
+}
+
+.btn-close {
+    filter: invert(1);
+    font-size: 1.5rem;
+}
+
+.captain-badge {
+    background: linear-gradient(45deg, var(--india-orange), var(--india-saffron));
+    color: var(--india-blue);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: 600;
+    display: inline-block;
+    margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 3rem;
+    }
+    .section-title {
+        font-size: 2.5rem;
+    }
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+    .player-modal-image {
+        width: 200px;
+        height: 200px;
+    }
+    .modal-body {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    .hero-slogan {
+        font-size: 1.4rem;
+    }
+    .section-title {
+        font-size: 2rem;
+    }
+    .stats-section {
+        padding: 2rem;
+    }
+}
+
+/* Paste all the CSS styles from the previous HTML file here */
+/* ... (see previous HTML for full CSS) ... */ 

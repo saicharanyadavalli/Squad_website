@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team India - Cricket Champions</title>
+    <link rel="stylesheet" href="team_india.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <div class="team-logo">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Board_of_Control_for_Cricket_in_India_Logo_%282024%29.svg/1200px-Board_of_Control_for_Cricket_in_India_Logo_%282024%29.svg.png" alt="Team India Logo" class="img-fluid" style="width: 150px; height: 150px; border-radius: 50%; border: 5px solid #fff; background: #fff; object-fit: cover;">
+                </div>
+                <h1 class="hero-title">TEAM INDIA</h1>
+                <p class="hero-slogan">"Chak De India - Let's Bring the Cup Home!"</p>
+                <div class="stats-section">
+                    <div class="row">
+                        <div class="col-md-3 col-6">
+                            <div class="stat-card">
+                                <div class="stat-number">2</div>
+                                <div class="stat-label">World Cups(ODI)</div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <div class="stat-card">
+                                <div class="stat-number">2</div>
+                                <div class="stat-label">World Cups(T20)</div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <div class="stat-card">
+                                <div class="stat-number">3</div>
+                                <div class="stat-label">Champions Trophies</div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <div class="stat-card">
+                                <div class="stat-number">2025</div>
+                                <div class="stat-label">Current Year</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down fa-3x"></i>
+        </div>
+    </section>
+    <!-- Players Section -->
+    <section class="players-section">
+        <div class="container">
+            <h2 class="section-title">Our Cricket Superstars</h2>
+            <div class="row" id="playersGrid">
+                <!-- Player cards will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+    <!-- Player Modal -->
+    <div class="modal fade" id="playerModal" tabindex="-1" aria-labelledby="playerModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="playerModalLabel">Player Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="modalBody">
+                    <!-- Modal content will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="team_india.js"></script>
+</body>
+</html> 
